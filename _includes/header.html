@@ -1,0 +1,28 @@
+<nav class="primary" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo" href="{{ "/" | relative_url }}"><img src="assets/images/logo.png" alt="FourEyesLab"  width="170"></a>
+    {% assign default_paths = site.pages | map: "path" %}
+    {% assign page_paths = site.header_pages | default: default_paths %}
+
+          <ul class="right hide-on-med-and-down">
+            <li {% if page.url=='/' %} {% endif %}><a href="{{site.baseurl}}/">Home</a></li>
+            <li {% if page.url=='/people' %} {% endif %}><a href="{{site.baseurl}}/people">People</a></li>
+            <li {% if page.url=='/research' %}{% endif %}><a href="{{site.baseurl}}/research">Research</a></li>
+            <li {% if page.url=='/publications' %} {% endif %}><a href="{{site.baseurl}}/publications">Publications</a></li>
+            <li {% if page.url=='/info' %} {% endif %}><a href="{{site.baseurl}}/info">Info for Students</a></li>
+            <li {% if page.url=='/datasets' %} {% endif %}><a href="{{site.baseurl}}/datasets">Datasets</a></li>
+            <li {% if page.url=='/contact' %} {% endif %}><a href="{{site.baseurl}}/contact">Contact</a></li>          
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+            <li {% if page.url=='/' %} {% endif %}><a href="{{site.baseurl}}/">Home</a></li>
+            <li {% if page.url=='/people' %} {% endif %}><a href="{{site.baseurl}}/people">People</a></li>
+            <li {% if page.url=='/research' %}{% endif %}><a href="{{site.baseurl}}/research">Research</a></li>
+            <li {% if page.url=='/publications' %} {% endif %}><a href="{{site.baseurl}}/publications">Publications</a></li>
+            <li {% if page.url=='/info' %} {% endif %}><a href="{{site.baseurl}}/info">Info for Students</a></li>
+            <li {% if page.url=='/datasets' %} {% endif %}><a href="{{site.baseurl}}/datasets">Datasets</a></li>
+            <li {% if page.url=='/contact' %} {% endif %}><a href="{{site.baseurl}}/contact">Contact</a></li>   
+          </ul>        
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
